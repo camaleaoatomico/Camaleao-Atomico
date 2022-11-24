@@ -90,7 +90,7 @@ nav .menu{
     scroll-behavior: smooth;
 }
 
-h1 a {
+.h1 {
   font-size: 80px;
   color: #ffffff;
   text-decoration: none;
