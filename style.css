@@ -231,15 +231,11 @@ nav .menu{
   outline: none;
   transition: all 0.3s ease;
 }
-.center button:first-child{
+.center button{
   color: #fff;
   background: none;
 }
-.btns button:first-child:hover{
-  background: white;
-  color: black;
-}
-.center .btns button:last-child{
+.btns button:hover{
   background: white;
   color: black;
 }
