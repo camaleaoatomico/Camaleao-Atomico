@@ -214,14 +214,14 @@ nav .menu{
     opacity: 1;
   }
 }
-.center button{
+.button{
   height: 55px;
   width: 170px;
   border-radius: 5px;
   border: none;
   margin: 0 10px;
   border: 2px solid white;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 500;
   padding: 0 10px;
   cursor: pointer;
