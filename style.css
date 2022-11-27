@@ -206,6 +206,7 @@ nav .menu{
 }
 
  }
+
 .popover:target {
   position: absolute;
   right: 0;
