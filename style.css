@@ -104,8 +104,7 @@ nav .menu{
 
 }
 
-.button,
-.button-49:after {
+.button:after {
   width: 150px;
   height: 76px;
   line-height: 78px;
