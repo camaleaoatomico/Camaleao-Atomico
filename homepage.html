@@ -1,252 +1,43 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página Inicial</title>	
-<style>
-@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
-
-:root {
-  --color-primary: #002626;
-  --color-secondary: #F0F7EE;
-  --duration: 1s;
-  --nav-duration: calc(var(--duration) / 4);
-  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --space: 1rem;
-  --font-primary: 'Helvetica', sans-serif;
-  --font-heading: 'Merriweather', serif;
-  --font-size: 1.125rem;
-  --line-height: 1.5;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-primary);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-}
-
-h1 {
-  margin-bottom: calc(var(--space) * 3);
-  font-family: var(--font-heading);
-  font-size: calc(var(--font-size) + 6vmin);
-  line-height: calc(var(--line-height) / 1.25);
-}
-
-.main-navigation-toggle {
-  position: fixed;
-  height: 1px; 
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-  
-  + label {
-    position: fixed;
-    top: calc(var(--space) * 1.5);
-    right: calc(var(--space) * 2);
-    cursor: pointer;
-    z-index: 2;
-  }
-}
-
-.icon--menu-toggle {
-  --size: calc(1rem + 4vmin);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: var(--size);
-  height: var(--size);
-  stroke-width: 6;
-}
-
-.icon-group {
-  transform: translateX(0);
-  transition: transform var(--nav-duration) var(--ease);
-}
-
-.icon--menu {
-  stroke: var(--color-primary);
-}
-
-.icon--close {
-  stroke: var(--color-secondary);
-  transform: translateX(-100%);
-}
-
-.main-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  transform: translateX(-100%);
-  transition: transform var(--nav-duration);
-  z-index: 1;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-primary);
-    transform-origin: 0 50%;
-    z-index: -1;
-  }
-  
-  ul {
-    font-size: 12vmin;
-    font-family: var(--font-heading);
-    width: 100%;
-  }
-  
-  li {
-    --border-size: 1vmin;
-    display: flex;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: var(--border-size);
-      background-color: var(--color-secondary);
-      transform-origin: 0 50%;
-      transform: translateX(-100%) skew(15deg);
-    }
-  }
-  
-  a {
-    display: inline-block;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--color-secondary);
-    line-height: 1;
-    text-decoration: none;
-    user-select: none;
-    padding: var(--space) calc(var(--space) * 2) calc(var(--space) + var(--border-size) / 2);
-    transform: translateY(100%);
-  }
-}
-
-.main-content {
-  margin: 6rem auto;
-  max-width: 70ch;
-  padding: 0 calc(var(--space) * 2);
-  transform: translateX(0);
-  transition: transform calc(var(--nav-duration) * 2) var(--ease);
-  
-  > * + * {
-    margin-top: calc(var(--space) * var(--line-height));
-  }
-}
-
-.main-navigation-toggle:checked {
-  ~ label .icon--menu-toggle {    
-    .icon-group {
-      transform: translateX(100%);
-    }
-  }
-  
-  ~ .main-content {
-    transform: translateX(10%);
-  }
-  
-  ~ .main-navigation {
-    transition-duration: 0s;
-    transform: translateX(0);
-    
-    &:after {
-      animation: nav-bg var(--nav-duration) var(--ease) forwards;
-    }
-    
-    li:after {
-      animation: nav-line var(--duration) var(--ease) forwards;
-    }
-    
-    a {
-      animation: link-appear calc(var(--duration) * 1.5) var(--ease) forwards;
-    }
-    
-    @for $i from 1 through 4 {
-      li:nth-child(#{$i}) {
-        &:after, a {
-          animation-delay: calc((var(--duration) / 2) * #{$i} * 0.125);
-        }
-      }
-    }
-  }
-}
-
-@keyframes nav-bg {
-  from { transform: translateX(-100%) skewX(-15deg) }
-  to { transform: translateX(0) }
-}
-
-@keyframes nav-line {
-  0%   { transform: scaleX(0); transform-origin: 0 50%; }
-  35%  { transform: scaleX(1.001); transform-origin: 0 50%; }
-  65%  { transform: scaleX(1.001); transform-origin: 100% 50%; }
-  100% { transform: scaleX(0); transform-origin: 100% 50%; }
-}
-
-@keyframes link-appear {
-  0%, 25%   { transform: translateY(100%); }
-  50%, 100% { transform: translateY(0); }
-}
-</style>
-<input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
-<label for="page-nav-toggle">
-  <svg class="icon--menu-toggle" viewBox="0 0 60 30">
-    <g class="icon-group">
-      <g class="icon--menu">
-        <path d="M 6 0 L 54 0" />
-        <path d="M 6 15 L 54 15" />
-        <path d="M 6 30 L 54 30" />
-      </g>
-      <g class="icon--close">
-        <path d="M 15 0 L 45 30" />
-        <path d="M 15 30 L 45 0" />
-      </g>
-    </g>
-  </svg>
-</label>
-
-<nav class="main-navigation">
-  <ul>
-    <li><a href="#">Vídeo-aulas</a></li>
-    <li><a href="#">Exercícios</a></li>
-    <li><a href="#">Fórmulas</a></li>
-    <li><a href="#">Dance</a></li>
-  </ul>
-</nav>
-
-<main class="main-content">
-  <h1>Quem somos?</h1>
-  <p>O projeto Camaleão Atômico nasceu como um trabalho de conclusão da disciplina FI092 do ProFis (UNICAMP) e foi desenvolvido por Nicoly Lourenço, Laís Qualtieri e Raíssa Martins. Como ex-alunas de escola pública e, por isso, já bem familiarizadas com as dificuldades que os alunos da rede estadual enfrentam com a disciplina de Física, decidimos desenvolver um site no formato de roteiro de estudos para auxiliá-los na revisão dos conteúdos de Física cobrados no ENEM.
-A curadoria dos conteúdos presentes no site foi realizada a partir de conversas com professores de Física e posterior aplicação de um questionário digital. O público-alvo desse questionário foram alunos dos 1°s, 2°s e 3°s anos do Ensino Médio público da cidade de Campinas.</p>
-  <p>Nisi harum ipsam reiciendis similique ipsum numquam quidem praesentium, cumque accusantium, magnam minima id voluptas et ad eos consequuntur libero impedit fuga. Ipsam id fugit animi quidem, doloribus dolorem nobis.</p>
-  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium?</p>
-  <p>Saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
-  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
-  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta porro sapiente excepturi debitis cum assumenda quasi quibusdam eligendi numquam vitae? Unde, optio dolore! Voluptatem officiis eum neque nihil laudantium quos.</p>
-  <p>Nisi harum ipsam reiciendis similique ipsum numquam quidem praesentium, cumque accusantium, magnam minima id voluptas et ad eos consequuntur libero impedit fuga. Ipsam id fugit animi quidem, doloribus dolorem nobis.</p>
-  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium?</p>
-  <p>Saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
-  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
-  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
-  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
-</main>
+02 <html>
+03 <head>
+04     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+05     <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+06     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+07 </head>
+08 <body>
+09     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+10     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+11 </body>
+12 </html>
+<nav>
+02     <div class="nav-wrapper">
+03         <img src="logo.png" width= 120px>
+04         <ul class="right hide-on-med-and-down">
+05             <li><a href="#">Vídeo-aulas</a></li>
+06             <li><a href="#">Exercícios</a></li>
+07             <li><a href="#">Fórmulas</a></li>
+08             <li><a href="#">Telegram</a></li>
+09         </ul>
+10     </div>
+11 </nav>
+<nav>
+02     <div class="nav-wrapper">
+03         <a href="#" class="brand-logo">Logo</a>
+04         <a href="#" data-activates="menu-mobile" class="button-collapse">
+05             <i class="material-icons">menu</i>
+06         </a>
+13         <ul class="side-nav" id="menu-mobile">
+14            li><a href="#">Vídeo-aulas</a></li>
+06             <li><a href="#">Exercícios</a></li>
+07             <li><a href="#">Fórmulas</a></li>
+08             <li><a href="#">Telegram</a></li>
+09         </ul>
+18         </ul>
+19     </div>
+20 </nav>
+<script>
+02 $(function(){
+03     $(".button-collapse").sideNav();
+04 });
+05 </script>
