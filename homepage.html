@@ -65,7 +65,7 @@ ul{
     background: var(--white);
     display: block;
     height: 2px;
-    position: relative;
+    position: fixed;
     width: 24px;
 
 } 
@@ -134,58 +134,21 @@ ul{
     top: 100px;
     width: 100%;
 }
-
-.subnav-content {
-    background-color:  var(--white);
-    width: 100%;
-    z-index: 1;
-    padding: 20px 0 ;
-    display: none;
-  }
-.subnav-content a {
-    color: var(--black);
-    text-decoration: none;
-    padding: 0;
-    margin: 10px 0;
-    text-align: center;
-}
-	
-.subnav:hover .subnav-content {
-    display: block;
-}
-	
-@media (min-width: 768px) {
-.subnav-content {
-   padding: 20px 0 ;
-   display: none;
-   background-color:  var(--black);
-}
-.subnav-content a {
-  color: white;
-    }
-}
-
 .p {
 margin: 8px;
 
 }
 </style>
     <header class="header">
-        <img src="logo.png" width= 120px>
+        <img src="logo.png" width= 110px>
         <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <nav class="nav">
             <ul class="menu">
                 <li><a href="#">Exercícios</a></li>
-                <li><a href="#">Resumos</a> </li>
+                <li><a href="#">Víeo-aulas</a> </li>
                 <li><a href="#">Fórmulas</a></li>
-            </ul>
-	<li class="subnav">
- 	 <p class="subnavbtn">Vídeo-aulas="fa fa-caret-down"></i></p>
-  	<div class="subnav-content">
-      <a href="#">Mecânica</a>
-      <a href="#">Dinâmica e Gravitação Universal</a>
-      <a href="#">Estática</a>
+		</ul>
   </div>
 </li>
         </nav>
