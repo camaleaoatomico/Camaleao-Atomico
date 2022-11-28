@@ -22,8 +22,9 @@
 }
 body{
     background-color: var(--white);
-    font-family: "Poppins", sans-serif;
+
 }
+	
 a{
     text-decoration: none;
 }
@@ -34,7 +35,7 @@ ul{
 .header{
     background-color: var(--black);
     box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
 }
@@ -71,7 +72,6 @@ ul{
     cursor: pointer;
     float: right;
     padding: 40px 20px;
-}/* Style label tag */
 
 .hamb-line {
     background: var(--white);
@@ -80,7 +80,7 @@ ul{
     position: relative;
     width: 24px;
 
-} /* Style span tag */
+}
 
 .hamb-line::before,
 .hamb-line::after{
@@ -167,22 +167,24 @@ ul{
   </style>
 <body>
     <header class="header">
-        <a href="logo.png" class="logo">Camaleão Atômico</a>
-        <input class="side-menu" type="checkbox" id="side-menu"/>
+     <img src="logo.png" width= 120px>
+       <div class= "title">
+        <h1>Camaleão Atômico</h1>
+     <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <nav class="nav">
             <ul class="menu">
-                <li><a href="#">Vídeo-aulas</a></li>
-			<li class="subnav">
-  			 <p class="subnavbtn">Vídeo-aulas<i class="fa fa-caret-down"></i></p>
-  			  <div class="subnav-content">
-                           <a href="#">Mecânica</a>
-                            <a href="#">Dinâmica</a>
-                            <a href="#">Gravitação Universal e Estática</a>
+	     <li><a href="#">Exercícios</a> </li>
+             <li><a href="#">lll</a></li>
+             <li><a href="#">Vídeo-aulas</a></li>
+	        <li class="subnav">
+  	         <p class="subnavbtn"><i class="fa fa-caret-down"></i></p>
+  		 <div class="subnav-content">
+                  <a href="#">Mecânica</a>
+                  <a href="#">Dinâmica</a>
+                  <a href="#">Gravitação Universal e Estática</a>
                        </div>
                         </li>
-              <li><a href="#">Exercícios</a> </li>
-              <li><a href="#">lll</a></li>
             </ul>
         </nav>
     </header>
