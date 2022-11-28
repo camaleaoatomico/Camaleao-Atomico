@@ -1,157 +1,252 @@
-<html lang="pt-br">
+
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Página Inicial</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Inicial</title>	
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
 
-:root{
-    --white: #f9f9f9;
-    --black: #36383F;
-    --gray: #85888C;
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: var(--white);
-    font-family: "Poppins", sans-serif;
-}
-a{
-    text-decoration: none;
-}
-ul{
-    list-style: none;
+:root {
+  --color-primary: #002626;
+  --color-secondary: #F0F7EE;
+  --duration: 1s;
+  --nav-duration: calc(var(--duration) / 4);
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: 'Helvetica', sans-serif;
+  --font-heading: 'Merriweather', serif;
+  --font-size: 1.125rem;
+  --line-height: 1.5;
 }
 
-.header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    top: 0;
-    width: 100%;
+* {
+  box-sizing: border-box;
 }
 
-.logo{
-    display: inline-block;
-    color: var(--white);
-    font-size: 60px;
-    margin-left: 10px;
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
 }
 
-.nav{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    background-color: var(--black);
-    overflow: hidden;
-
-}
-.menu a{
-    display: block;
-    padding: 30px;
-    color: var(--white);
-}
-.menu a:hover{
-    background-color: var(--gray);
-}
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
+h1 {
+  margin-bottom: calc(var(--space) * 3);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size) + 6vmin);
+  line-height: calc(var(--line-height) / 1.25);
 }
 
-.hamb{
+.main-navigation-toggle {
+  position: fixed;
+  height: 1px; 
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+  
+  + label {
+    position: fixed;
+    top: calc(var(--space) * 1.5);
+    right: calc(var(--space) * 2);
     cursor: pointer;
-    float: right;
-    padding: 40px 20px;
+    z-index: 2;
+  }
 }
 
-.hamb-line {
-    background: var(--white);
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
+.icon--menu-toggle {
+  --size: calc(1rem + 4vmin);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--size);
+  height: var(--size);
+  stroke-width: 6;
+}
 
-} 
+.icon-group {
+  transform: translateX(0);
+  transition: transform var(--nav-duration) var(--ease);
+}
 
-.hamb-line::before,
-.hamb-line::after{
-    background: var(--white);
+.icon--menu {
+  stroke: var(--color-primary);
+}
+
+.icon--close {
+  stroke: var(--color-secondary);
+  transform: translateX(-100%);
+}
+
+.main-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform var(--nav-duration);
+  z-index: 1;
+  
+  &:after {
     content: '';
-    display: block;
-    height: 100%;
     position: absolute;
-    transition: all .2s ease-out;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-.hamb-line::before{
-    top: 5px;
-}
-.hamb-line::after{
-    top: -5px;
-}
-
-
-@media (min-width: 768px) {
-    .nav{
-        max-height: none;
-        top: 0;
-        position: relative;
-        float: right;
-        width: fit-content;
-        background-color: transparent;
-    }
-    .menu li{
-        float: left;
-    }
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
-
-    }
-
-    .hamb{
-        display: none;
-    }
-}
-
-.header{
-    background-color: var(--black);
-    box-shadow: 1px 1px 5px 0px var(--grey);
-    position: sticky;
-    top: 100px;
+    height: 100%;
+    background-color: var(--color-primary);
+    transform-origin: 0 50%;
+    z-index: -1;
+  }
+  
+  ul {
+    font-size: 12vmin;
+    font-family: var(--font-heading);
     width: 100%;
-}  
-</head>
-<body>
-    <header class="header">
-        <a href="logo.png" class="logo">Camaleão Atômico</a>
-        <input class="side-menu" type="checkbox" id="side-menu"/>
-        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
-        <nav class="nav">
-            <ul class="menu">
-                <li><a href="#">Vídeo-aulas</a></li>
-	        <li><a href="#">Exercícios</a> </li>
-                <li><a href="#">Fórmulas/a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <h1>
-                Quem somos?
-            </h1>
-            <p> O projeto Camaleão Atômico nasceu como um trabalho de conclusão da disciplina FI092 do ProFis (UNICAMP) e foi desenvolvido por Nicoly Lourenço, Laís Qualtieri e Raíssa Martins. Como ex-alunas de escola pública e, por isso, já bem familiarizadas com as dificuldades que os alunos da rede estadual enfrentam com a disciplina de Física, decidimos desenvolver um site no formato de roteiro de estudos para auxiliá-los na revisão dos conteúdos de Física cobrados durante o Ensino Médio 
-             </p>
-        </article>
-    </main>
-</body>
-</html>
+  }
+  
+  li {
+    --border-size: 1vmin;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: var(--border-size);
+      background-color: var(--color-secondary);
+      transform-origin: 0 50%;
+      transform: translateX(-100%) skew(15deg);
+    }
+  }
+  
+  a {
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--color-secondary);
+    line-height: 1;
+    text-decoration: none;
+    user-select: none;
+    padding: var(--space) calc(var(--space) * 2) calc(var(--space) + var(--border-size) / 2);
+    transform: translateY(100%);
+  }
+}
+
+.main-content {
+  margin: 6rem auto;
+  max-width: 70ch;
+  padding: 0 calc(var(--space) * 2);
+  transform: translateX(0);
+  transition: transform calc(var(--nav-duration) * 2) var(--ease);
+  
+  > * + * {
+    margin-top: calc(var(--space) * var(--line-height));
+  }
+}
+
+.main-navigation-toggle:checked {
+  ~ label .icon--menu-toggle {    
+    .icon-group {
+      transform: translateX(100%);
+    }
+  }
+  
+  ~ .main-content {
+    transform: translateX(10%);
+  }
+  
+  ~ .main-navigation {
+    transition-duration: 0s;
+    transform: translateX(0);
+    
+    &:after {
+      animation: nav-bg var(--nav-duration) var(--ease) forwards;
+    }
+    
+    li:after {
+      animation: nav-line var(--duration) var(--ease) forwards;
+    }
+    
+    a {
+      animation: link-appear calc(var(--duration) * 1.5) var(--ease) forwards;
+    }
+    
+    @for $i from 1 through 4 {
+      li:nth-child(#{$i}) {
+        &:after, a {
+          animation-delay: calc((var(--duration) / 2) * #{$i} * 0.125);
+        }
+      }
+    }
+  }
+}
+
+@keyframes nav-bg {
+  from { transform: translateX(-100%) skewX(-15deg) }
+  to { transform: translateX(0) }
+}
+
+@keyframes nav-line {
+  0%   { transform: scaleX(0); transform-origin: 0 50%; }
+  35%  { transform: scaleX(1.001); transform-origin: 0 50%; }
+  65%  { transform: scaleX(1.001); transform-origin: 100% 50%; }
+  100% { transform: scaleX(0); transform-origin: 100% 50%; }
+}
+
+@keyframes link-appear {
+  0%, 25%   { transform: translateY(100%); }
+  50%, 100% { transform: translateY(0); }
+}
+</style>
+<input id="page-nav-toggle" class="main-navigation-toggle" type="checkbox" />
+<label for="page-nav-toggle">
+  <svg class="icon--menu-toggle" viewBox="0 0 60 30">
+    <g class="icon-group">
+      <g class="icon--menu">
+        <path d="M 6 0 L 54 0" />
+        <path d="M 6 15 L 54 15" />
+        <path d="M 6 30 L 54 30" />
+      </g>
+      <g class="icon--close">
+        <path d="M 15 0 L 45 30" />
+        <path d="M 15 30 L 45 0" />
+      </g>
+    </g>
+  </svg>
+</label>
+
+<nav class="main-navigation">
+  <ul>
+    <li><a href="#">Vídeo-aulas</a></li>
+    <li><a href="#">Exercícios</a></li>
+    <li><a href="#">Fórmulas</a></li>
+    <li><a href="#">Dance</a></li>
+  </ul>
+</nav>
+
+<main class="main-content">
+  <h1>Quem somos?</h1>
+  <p>O projeto Camaleão Atômico nasceu como um trabalho de conclusão da disciplina FI092 do ProFis (UNICAMP) e foi desenvolvido por Nicoly Lourenço, Laís Qualtieri e Raíssa Martins. Como ex-alunas de escola pública e, por isso, já bem familiarizadas com as dificuldades que os alunos da rede estadual enfrentam com a disciplina de Física, decidimos desenvolver um site no formato de roteiro de estudos para auxiliá-los na revisão dos conteúdos de Física cobrados no ENEM.
+A curadoria dos conteúdos presentes no site foi realizada a partir de conversas com professores de Física e posterior aplicação de um questionário digital. O público-alvo desse questionário foram alunos dos 1°s, 2°s e 3°s anos do Ensino Médio público da cidade de Campinas.</p>
+  <p>Nisi harum ipsam reiciendis similique ipsum numquam quidem praesentium, cumque accusantium, magnam minima id voluptas et ad eos consequuntur libero impedit fuga. Ipsam id fugit animi quidem, doloribus dolorem nobis.</p>
+  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium?</p>
+  <p>Saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
+  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
+  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta porro sapiente excepturi debitis cum assumenda quasi quibusdam eligendi numquam vitae? Unde, optio dolore! Voluptatem officiis eum neque nihil laudantium quos.</p>
+  <p>Nisi harum ipsam reiciendis similique ipsum numquam quidem praesentium, cumque accusantium, magnam minima id voluptas et ad eos consequuntur libero impedit fuga. Ipsam id fugit animi quidem, doloribus dolorem nobis.</p>
+  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium?</p>
+  <p>Saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
+  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
+  <p>Sapiente cumque omnis, exercitationem molestiae dolores id enim praesentium labore quia esse dolore ad suscipit nostrum temporibus veritatis aperiam voluptatem. Quisquam, magnam excepturi nobis illo eligendi expedita eos molestias accusantium saepe omnis ex placeat assumenda esse corrupti, nobis veniam neque architecto possimus quod laborum iusto eos maxime recusandae asperiores in. Vel magnam dolore pariatur, cumque similique necessitatibus? Autem, facere quibusdam.</p>
+  <p>Sequi at eveniet a, ad corporis sunt ullam natus deleniti obcaecati perferendis culpa ratione blanditiis! Sunt nisi, porro, quisquam officiis ducimus numquam culpa dicta, voluptatibus nam autem eaque! Facilis, voluptates.</p>
+</main>
