@@ -1,12 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Vídeo-aulas de Mecânica</title>
+<title>Vídeo-aulas Mecânica</title>
 <style>
-* {
-  box-sizing: border-box;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #5f0a87;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #5f0a87;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
 
 [class*="col-"] {
   float: left;
@@ -37,149 +90,108 @@
 .menu li:hover {
   background-color: #008080;
 }
-
-.aside {
-  background-color: #008080;
-  padding: 15px;
-  color: #ffffff;
-  text-align: center;
-  font-size: 14px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-}
-
-@media only screen and (min-width: 600px) {
-  .col-s-1 {width: 8.33%;}
-  .col-s-2 {width: 16.66%;}
-  .col-s-3 {width: 25%;}
-  .col-s-4 {width: 33.33%;}
-  .col-s-5 {width: 41.66%;}
-  .col-s-6 {width: 50%;}
-  .col-s-7 {width: 58.33%;}
-  .col-s-8 {width: 66.66%;}
-  .col-s-9 {width: 75%;}
-  .col-s-10 {width: 83.33%;}
-  .col-s-11 {width: 91.66%;}
-  .col-s-12 {width: 100%;}
-}
-@media only screen and (min-width: 768px) {
-  .col-1 {width: 8.33%;}
-  .col-2 {width: 16.66%;}
-  .col-3 {width: 25%;}
-  .col-4 {width: 33.33%;}
-  .col-5 {width: 41.66%;}
-  .col-6 {width: 50%;}
-  .col-7 {width: 58.33%;}
-  .col-8 {width: 66.66%;}
-  .col-9 {width: 75%;}
-  .col-10 {width: 83.33%;}
-  .col-11 {width: 91.66%;}
-  .col-12 {width: 100%;}
-}
 </style>
 </head>
 <body>
 
-<div class="header">
-<img src="logo.png" width= 120px>
-<h1>Vídeo-aulas</h1>
+<div class="topnav">
+
+  <div class="topnav-centered">
+    <a href="#" class="active">Página Inicial</a>
+  </div>
+  
+  <a href="#">Avalie o site</a>
+  <a href="#">Telegram</a>
+  
+  <div class="topnav-right">
+    <a href="#">Exercícios</a>
+  </div>
+  
 </div>
-  <div class="col-6 col-s-9">
-	  <center><h2>Vídeo-aulas: Mecânica</h2><center>
-	  <p><b>Cinemática</b> é a parte da mecânica que descreve os movimentos, procurando determinar a posição, a velocidade e a aceleração de um corpo em cada instante. </p>
-    <p><b>Móveis</b> são corpos em movimento. 
-    <p> Um <b>ponto material</b> é um corpo cujas dimensões não interferem no estudo de um dado fenômeno. </p>
-    <p> Um <b> corpo extenso</b> é um corpo cujas dimensões são relevantes no estudo de um dado fenômeno.</P>
-	<p> A <b>posição</b> de um móvel localiza o mesmo em um dado caminho.</p>
-    <p><b>Trajetória</b> é o conjunto das posições sucessivas ocupadas por um móvel no decurso do tempo.</p> 
-    <article><b>Espaço</b> é a medida algébrica do arco da trajetória que vai do marco zero à posição do móvel.</p>
-    <p><b>Marco zero</b> é um ponto da trajetória escolhido arbitrariamente, a partir do qual medem-se comprimentos que indicam a posição do móvel, mas que não fornecem nem o sentido nem a distância percorrida.</article> 
-    <p>Um <b>referencial</b> ou sistema de referência é um corpo em relação ao qual identificamos o movimento (ou repouso) de um dado móvel.</p>
-                        
-	                <center><h2><b>Introdução à Cinemática</b></h2></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/a7RxDGo8Zks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<div style="padding-left:16px">
+ <h1>Mecânica</h1>
+  
+	                <center><h2><b>Introdução à Cinemática</b></h2><iframe width="560" height="315" src="https://www.youtube.com/embed/a7RxDGo8Zks" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   
                         <center><h2><b>Velocidade média</b></h2></center>
     
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/YzO0nV1WrqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YzO0nV1WrqE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                         <center><h2><b>Velocidade instantânea</b></h2></center>
     
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/kDr0yBQLk6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kDr0yBQLk6g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                        <center><h2><b>Movimento Uniforme</center></h2></b>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/UbRS2iHt-uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UbRS2iHt-uo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/A2GManwSqlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A2GManwSqlg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  
                            <center><h2><b>Movimento Retilíneo Uniforme</b></h2></center>
                     
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/b6EfqbNDK-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b6EfqbNDK-c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                         <center><h2><b>Movimento Uniformemente Variado</b></h2></center>
     
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Vzt2BBjqcqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vzt2BBjqcqQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                      
                     <center><h2><b>Equação de Torricelli</b></h2></center>
                     
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/G2Lv2y9Zapo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G2Lv2y9Zapo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                    
                    <center><h2><b>Função horária do espaço no MUV</b></h2></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/-0NzXKsRtMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-0NzXKsRtMc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
  
                     <center><h2><b>Função horária da Velocidade</b></h2></center>
 
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/83V6bMtXVu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/83V6bMtXVu4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                  
                  <center><h2><b>Queda livre e Lançamento vertical</b></h2></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/c/DaLuzAulas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=h0DsCb18fkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://https://www.youtube.com/watch?v=ZQQurGymVKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/c/DaLuzAulas" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=h0DsCb18fkY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://https://www.youtube.com/watch?v=ZQQurGymVKU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                  <center><h2><b>Gráficos do MU e MUV</b></h2></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=VaML8uOA_1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/watch?v=vm7Q_kqMurM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=VaML8uOA_1E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=vm7Q_kqMurM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <center><h2><b>Vetores</center></h2></b>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/zAbqwYm-A6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/RRgBdqBl6Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zAbqwYm-A6o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/RRgBdqBl6Ig" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		<center><h2><b>Operações com Vetores</center></h2></b>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/35kQYE1on_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/8Qg4U_eCPzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/35kQYE1on_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8Qg4U_eCPzA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		<center><h2><b>Vetor deslocamento, velocidade vetorial e aceleração vetorial:</center></h2></b>
-<center><iframe width="560" height="315" src="https://youtu.be/Fw9YZSEeqTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://youtu.be/GpEfIKAX-L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://youtu.be/Ajzqi7C6Gn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://youtu.be/Fw9YZSEeqTY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/GpEfIKAX-L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://youtu.be/Ajzqi7C6Gn0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 		<center><h2><b>Lançamento horizontal e oblíquo no vácuo:</center></h2></b>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/EV_xjL4a8uY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/EV_xjL4a8uY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		
 		<center><h2><b>Movimentos circulares:</center></h2></b>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Vfd7GJnjaKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/8HYBSReKNFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>	
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/KdlBRrLWDoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vfd7GJnjaKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8HYBSReKNFc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>	
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KdlBRrLWDoU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
-  <div class="col-3 col-s-12">
-    <div class="aside">
-      <h2> Fórmulas - Cinemática </h2>
-        <p> Vm = ΔS/Δt </p>
-	<p> S = S0 + V.t </p>
-	<p> α = Δv/Δt </p>
-	<p> V(t) = v0 + α </p>
-	<p> V^2 = V0^2 + 2.α.ΔS </p>
-        <p> V = V0 ± gt </p>
-	<p> Vx = v0 cos(Θ) </p>
-        <p> Vy = v0 sen(Θ) </p>
-	<p> αcp = V^2/R = w^2.R </p>
-	<p> ω^2 = w0^2 + 2Δφ </p>
-        <p> F = 1/T </p>
-	<p> ω = ∆φ/∆t </p>
-	<p> α = ∆ω/ ∆t </p>
-	<p> ω + ω0 + α.t </p>
-    </div>
-  </div>
-</div>
 </body>
 </html>
