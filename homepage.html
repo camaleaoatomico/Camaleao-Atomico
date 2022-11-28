@@ -1,20 +1,12 @@
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Página Inicial</title>
-  </head>
+</head>
+<body>
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"); /* import font */
-
-:root{
-    --white: #f9f9f9;
-    --black: #36383F;
-    --gray: #85888C;
-}
-
 *{
     margin: 0;
     padding: 0;
@@ -22,9 +14,7 @@
 }
 body{
     background-color: var(--white);
-
 }
-	
 a{
     text-decoration: none;
 }
@@ -39,18 +29,15 @@ ul{
     top: 0;
     width: 100%;
 }
-
 .logo{
     display: inline-block;
-    color: var(--white);
-    font-size: 60px;
     margin-left: 10px;
 }
 
 .nav{
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: relative;
     background-color: var(--black);
     overflow: hidden;
 
@@ -72,6 +59,7 @@ ul{
     cursor: pointer;
     float: right;
     padding: 40px 20px;
+}
 
 .hamb-line {
     background: var(--white);
@@ -80,7 +68,7 @@ ul{
     position: relative;
     width: 24px;
 
-}
+} 
 
 .hamb-line::before,
 .hamb-line::after{
@@ -101,7 +89,7 @@ ul{
 
 .side-menu {
     display: none;
-}
+} 
 
 .side-menu:checked ~ nav{
     max-height: 100%;
@@ -117,7 +105,6 @@ ul{
     transform: rotate(45deg);
     top:0;
 }
-
 @media (min-width: 768px) {
     .nav{
         max-height: none;
@@ -130,62 +117,77 @@ ul{
     .menu li{
         float: left;
     }
-    .menu a:hover{
-        background-color: transparent;
-        color: var(--gray);
+.menu a:hover{
+  background-color: transparent;
+  color: var(--gray);
 
     }
 
-    .hamb{
-        display: none;
+ .hamb{
+   display: none;
     }
 }
-
 .header{
     background-color: var(--black);
     box-shadow: 1px 1px 5px 0px var(--grey);
-    position: sticky;
+    position: relative;
     top: 100px;
     width: 100%;
-}  
- 
+}
+
+.subnav-content {
+    background-color:  var(--white);
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0 ;
+    display: none;
+  }
+.subnav-content a {
+    color: var(--black);
+    text-decoration: none;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+}
+	
 .subnav:hover .subnav-content {
     display: block;
 }
-
+	
 @media (min-width: 768px) {
-
-    .subnav-content {
-        padding: 20px 0 ;
-        display: none;
-        background-color:  var(--black);
-    }
-    .subnav-content a {
-        color: white;
+.subnav-content {
+   padding: 20px 0 ;
+   display: none;
+   background-color:  var(--black);
+}
+.subnav-content a {
+  color: white;
     }
 }
-  </style>
-<body>
+
+.p {
+margin: 8px;
+
+}
+</style>
     <header class="header">
-     <img src="logo.png" width= 120px>
-       <div class= "title">
-        <h1>Camaleão Atômico</h1>
-     <input class="side-menu" type="checkbox" id="side-menu"/>
+        <img src="logo.png" width= 120px>
+        <input class="side-menu" type="checkbox" id="side-menu"/>
         <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
         <nav class="nav">
             <ul class="menu">
-	     <li><a href="#">Exercícios</a> </li>
-             <li><a href="#">lll</a></li>
-             <li><a href="#">Vídeo-aulas</a></li>
-	        <li class="subnav">
-  	         <p class="subnavbtn"><i class="fa fa-caret-down"></i></p>
-  		 <div class="subnav-content">
-                  <a href="#">Mecânica</a>
-                  <a href="#">Dinâmica</a>
-                  <a href="#">Gravitação Universal e Estática</a>
-                       </div>
-                        </li>
+                <li><a href="#">Exercícios</a></li>
+                <li><a href="#">Resumos</a> </li>
+                <li><a href="#">Fórmulas</a></li>
             </ul>
+	<li class="subnav">
+ 	 <p class="subnavbtn">Vídeo-aulas="fa fa-caret-down"></i></p>
+  	<div class="subnav-content">
+      <a href="#">Mecânica</a>
+      <a href="#">Dinâmica e Gravitação Universal</a>
+      <a href="#">Estática</a>
+  </div>
+</li>
         </nav>
     </header>
     <main>
@@ -194,7 +196,7 @@ ul{
                 Quem somos?
             </h1>
             <p>
-                More Content
+               O projeto Camaleão Atômico nasceu como um trabalho de conclusão da disciplina FI092 do ProFis (UNICAMP) e foi desenvolvido por Nicoly Lourenço, Laís Qualtieri e Raíssa Martins. Como ex-alunas de escola pública e, por isso, já bem familiarizadas com as dificuldades que os alunos da rede estadual enfrentam com a disciplina de Física, decidimos desenvolver um site no formato de roteiro de estudos para auxiliá-los na revisão dos conteúdos de Física cobrados no ENEM. A curadoria dos conteúdos presentes no site foi realizada a partir de conversas com professores de Física e posterior aplicação de um questionário digital. O público-alvo desse questionário foram alunos dos 1°s, 2°s e 3°s anos do Ensino Médio público da cidade de Campinas.
             </p>
         </article>
     </main>
