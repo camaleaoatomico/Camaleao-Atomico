@@ -1,62 +1,173 @@
-Gravitação universal:
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vídeo-aulas Gravitação Universal e Estática</title>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-Leis de Kepler:
-https://youtu.be/18G4k0sgK_o
-https://youtu.be/1dBYixqIoYU
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+}
 
-Lei da gravitação universal:
-https://youtu.be/ZMb93bV3oFI
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
 
-Campo gravitacional:
-https://youtu.be/q4h0Zpan8eY
+.topnav a:hover {
+  background-color: #5f0a87;
+  color: black;
+}
 
-Movimentos de satélites:
-https://youtu.be/zCSKinQy5jQ
+.topnav a.active {
+  background-color: #5f0a87;
+  color: white;
+}
 
-Aceleração da gravidade:
-https://youtu.be/w6sQ1YmyBWg
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav-right {
+    float: none;
+    display: block;
+  }
+  
+  .topnav-centered a {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
 
 
+[class*="col-"] {
+  float: left;
+  display: fixed;
+  padding: 15px;
+}
+
+.header {
+  background-color: #5f0a87;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #9dfff4;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #008080;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+
+  <div class="topnav-centered">
+    <a href="homepage.html" class="active">Página Inicial</a>
+  </div>
+  
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSdNBDDLFqr4uLIFapP18pleWQuYHKTLAtn5-YTY9F72QVx3vA/viewform?embedded=true">Avalie o site</a>
+  <a href="t.me/camaleaoatomico">Telegram</a>
+  
+  <div class="topnav-right">
+    <a href="#">Exercícios</a>
+  </div>
+  
+</div>
+
+<div style="padding-left:16px">
+ <h1>Gravitação Universal</h1>
+ <center><h2><b>Leis de Kepler</center></h2></b>
+<center><iframe width="560" height="315" src="https://youtu.be/18G4k0sgK_o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://youtu.be/1dBYixqIoYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://youtu.be/1dBYixqIoYU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<center><h2><b>Lei da gravitação universal</b></h2></center>
+<iframe width="560" height="315" src="https://youtu.be/ZMb93bV3oFI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<center><h2><b>Campo gravitacional</b></h2><center>
+		<iframe width="560" height="315" src="https://youtu.be/q4h0Zpan8eY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<center><h2><b>Movimentos de satélites</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/zCSKinQy5jQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+ <center><h2><b>Aceleração da gravidade</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/w6sQ1YmyBWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h1>Estática, Hidrostática e Hidrodinâmica</h1>
+
+<center><h2><b>Sistema de forças aplicadas a um ponto material</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/JCdZ2RwMft0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+	<center><h2><b>Equilíbrio de um ponto material</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/46CYw-ZYI40" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
- 6. Estática, Hidrostática e Hidrodinâmica:
-Sistema de forças aplicadas a um ponto material:
-https://youtu.be/JCdZ2RwMft0
+<center><h2><b>Equilíbrio dos corpos extensos</b></h2><center>
+<center><iframe width="560" height="315" src="https://youtu.be/fFW6OLfWMyk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src=" https://youtu.be/8eFSBOOxtUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Equilíbrio de um ponto material:
-https://youtu.be/46CYw-ZYI40
+ 
+ <center><h2><b>Teorema das três forças</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/FPn2u4iqdAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Equilíbrio dos corpos extensos:
-https://youtu.be/fFW6OLfWMyk
- https://youtu.be/8eFSBOOxtUU
+ <center><h2><b>Densidade e Pressão</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/FPn2u4iqdAI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Teorema das três forças:
-https://youtu.be/FPn2u4iqdAI
+ <center><h2><b>Teorema de Stevin</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/M58YeFoINmk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Densidade e Pressão:
-https://youtu.be/fHXIyKetL1k
+ <center><h2><b>Vasos comunicantes e liquidos imiscíveis</b></h2><center>
+<center><iframe width="560" height="315" src="https://youtu.be/CrN3SYbZ4CE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://youtu.be/YgFRKReOZHE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Teorema de Stevin:
-https://youtu.be/M58YeFoINmk
+ <center><h2><b>Princípio de Pascal e a Prensa hidráulica</b></h2><center>
+<center><iframe width="560" height="315" src="https://youtu.be/MgFKKbmkb3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://youtu.be/y5Iwcrpq6cM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Vasos comunicantes e liquidos imiscíveis:
-https://youtu.be/CrN3SYbZ4CE
-https://youtu.be/YgFRKReOZHE
+<center><h2><b>Princípio de arquimedes</b></h2><center>
+<center><iframe width="560" height="315" src="https://youtu.be/97L9W7GABuo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<center><iframe width="560" height="315" src="https://youtu.be/Yq2EaW-9X_8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
-Princípio de Pascal e a Prensa hidráulica:
-https://youtu.be/MgFKKbmkb3E
-https://youtu.be/y5Iwcrpq6cM
+<center><h2><b>Vazão e equação da continuidade</b></h2><center>
+<iframe width="560" height="315" src="https://youtu.be/8fTCq8SX2PQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Princípio de arquimedes:
-https://youtu.be/97L9W7GABuo
-https://youtu.be/Yq2EaW-9X_8
+<center><h2><b>Vazão e equação da continuidade</b></h2><center>
+<iframe width="560" height="315" src="Equação de Bernoulli:" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Vazão e equação da continuidade:
-https://youtu.be/8fTCq8SX2PQ
-
-Equação de Bernoulli:
-https://youtu.be/4-QjbYd4aqI
-
-Equação de torricelli:
-https://youtu.be/639RgoEmuMg
-
+</body>
+</html>
